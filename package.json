@@ -9,6 +9,7 @@
     "test:unit": "vitest"
   },
   "dependencies": {
+    "mysql": "^2.18.1",
     "pinia": "^2.1.6",
     "vue": "^3.3.4"
   },
