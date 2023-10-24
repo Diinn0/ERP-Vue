@@ -18,9 +18,9 @@ coverage
 /cypress/screenshots/
 
 # Editor directories and files
-.vscode/*
+../.vscode/.idea
 !.vscode/extensions.json
-.idea
+.vscode/.idea
 *.suo
 *.ntvs*
 *.njsproj
@@ -35,30 +35,30 @@ coverage
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/**/usage.statistics.xml
-.idea/**/dictionaries
-.idea/**/shelf
+.vscode/.idea/**/workspace.xml
+.vscode/.idea/**/tasks.xml
+.vscode/.idea/**/usage.statistics.xml
+.vscode/.idea/**/dictionaries
+.vscode/.idea/**/shelf
 
 # AWS User-specific
-.idea/**/aws.xml
+.vscode/.idea/**/aws.xml
 
 # Generated files
-.idea/**/contentModel.xml
+.vscode/.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
-.idea/**/dataSources/
-.idea/**/dataSources.ids
-.idea/**/dataSources.local.xml
-.idea/**/sqlDataSources.xml
-.idea/**/dynamic.xml
-.idea/**/uiDesigner.xml
-.idea/**/dbnavigator.xml
+.vscode/.idea/**/dataSources/
+.vscode/.idea/**/dataSources.ids
+.vscode/.idea/**/dataSources.local.xml
+.vscode/.idea/**/sqlDataSources.xml
+.vscode/.idea/**/dynamic.xml
+.vscode/.idea/**/uiDesigner.xml
+.vscode/.idea/**/dbnavigator.xml
 
 # Gradle
-.idea/**/gradle.xml
-.idea/**/libraries
+.vscode/.idea/**/gradle.xml
+.vscode/.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -77,7 +77,7 @@ coverage
 cmake-build-*/
 
 # Mongo Explorer plugin
-.idea/**/mongoSettings.xml
+.vscode/.idea/**/mongoSettings.xml
 
 # File-based project format
 *.iws
@@ -92,10 +92,10 @@ out/
 atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
-.idea/replstate.xml
+.vscode/.idea/replstate.xml
 
 # SonarLint plugin
-.idea/sonarlint/
+.vscode/.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
 com_crashlytics_export_strings.xml
@@ -104,19 +104,19 @@ crashlytics-build.properties
 fabric.properties
 
 # Editor-based Rest Client
-.idea/httpRequests
+.vscode/.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
-.idea/caches/build_file_checksums.ser
+.vscode/.idea/caches/build_file_checksums.ser
 
 ### Intellij+all Patch ###
 # Ignore everything but code style settings and run configurations
 # that are supposed to be shared within teams.
 
-.idea/*
+.vscode/.idea/*
 
-!.idea/codeStyles
-!.idea/runConfigurations
+!.vscode/.idea/codeStyles
+!.vscode/.idea/runConfigurations
 
 ### VisualStudioCode ###
 .vscode/*
@@ -157,3 +157,5 @@ npm-debug.log
 yarn-error.log
 
 # End of https://www.toptal.com/developers/gitignore/api/vue,vuejs,intellij+all,visualstudiocode
+
+.env
