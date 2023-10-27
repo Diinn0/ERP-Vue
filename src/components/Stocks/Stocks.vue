@@ -1,7 +1,17 @@
 <script setup>
 import {ref} from "vue";
+import Stock from "@/components/database/model/Stock";
 
 const items = ref([{ message: 'Foo' }, { message: 'Bar' }])
+
+const data = ref([
+  new Stock(0, "Vélo A", 5, 5),
+  new Stock(1, "Cadre", 50, 0),
+  new Stock(2, "Guidon", 1, 5),
+  new Stock(3, "Selle", 10, 150),
+  new Stock(4, "Chaine", 52, 525),
+  new Stock(5, "Pédales", 0, 39),
+]);
 </script>
 
 <template>
@@ -21,11 +31,11 @@ const items = ref([{ message: 'Foo' }, { message: 'Bar' }])
       </tr>
       </thead>
       <tbody>
-      <tr v-for="item in items">
-        <td>{{ item.message }}</td>
-        <td>{{ item.message }}</td>
-        <td>{{ item.message }}</td>
-        <td>{{ item.message }}</td>
+      <tr v-for="item in data">
+        <td>{{ item.id}}</td>
+        <td>{{ item.nom }}</td>
+        <td>{{ item.current_quantity }}</td>
+        <td>{{ item.needed_quantity }}</td>
       </tr>
       </tbody>
     </table>
