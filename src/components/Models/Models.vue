@@ -1,14 +1,22 @@
 <script setup>
   import {ref} from "vue";
+  import Order from "@/components/database/model/Order";
+  import Model from "@/components/database/model/Model";
 
-  const items = ref([{ message: 'Foo' }, { message: 'Bar' }])
+  const data = ref([
+    new Model(0, "Vélo A",  5, 5),
+    new Model(1, "Vélo VTT",  10, 140),
+    new Model(2, "Vélo BAP",  40, 20)
+  ]);
 </script>
 
 <template>
   <div style="display: flex; flex-direction: column; justify-content: space-evenly; padding: 2em">
     <div style="display: flex; flex-direction: row; flex: auto">
       <h2 style="flex: 1">Vision des modèles</h2>
-      <button>Ajouter un modèle</button>
+      <button type="button">
+        <a href="#/addModel">Ajout de modèle</a>
+      </button>
     </div>
 
     <table id="customers" style="flex: 1; margin-top: 3em">
@@ -21,11 +29,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item in items">
-          <td>{{ item.message }}</td>
-          <td>{{ item.message }}</td>
-          <td>{{ item.message }}</td>
-          <td>{{ item.message }}</td>
+        <tr v-for="item in data">
+          <td>{{ item.id }}</td>
+          <td>{{ item.nom }}</td>
+          <td>{{ item.current_quantity }}</td>
+          <td>{{ item.needed_quantity }}</td>
         </tr>
       </tbody>
     </table>
