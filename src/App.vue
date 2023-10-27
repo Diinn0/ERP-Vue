@@ -2,10 +2,16 @@
 import { ref, computed } from 'vue'
 import Models from "@/components/Models/Models.vue";
 import Stocks from "@/components/Stocks/Stocks.vue";
+import Orders from "@/components/Orders/Orders.vue";
+import AddModel from "@/components/addModel/AddModel.vue";
+import Simulator from "@/components/Simulator/Simulator.vue";
 
 const routes = {
   '/': Models,
-  '/about': Stocks
+  '/addModel' : AddModel,
+  '/stocks': Stocks,
+  '/orders': Orders,
+  '/simulator': Simulator
 }
 
 const currentPath = ref(window.location.hash)
@@ -20,13 +26,15 @@ const currentView = computed(() => {
 </script>
 
 <template>
-  <a href="#/">Home</a> |
-  <a href="#/about">About</a> |
-  <a href="#/non-existent-path">Broken Link</a>
+  <a href="#/">Modèles</a> |
+  <a href="#/stocks">Stocks</a> |
+  <a href="#/orders">Commandes</a> |
+  <a href="#/simulator">Simulation</a>
   <component :is="currentView" />
-  <Models/>
 </template>
 
 <style scoped>
-
+a {
+  color: white;
+}
 </style>
