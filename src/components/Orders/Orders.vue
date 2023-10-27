@@ -1,7 +1,15 @@
 <script setup>
 import {ref} from "vue";
+import Order from '../database/model/Order'
 
 const items = ref([{ message: 'Foo' }, { message: 'Bar' }])
+
+const data = ref([
+  new Order(0, "Vélo A", 10, 5, 5),
+  new Order(1, "Vélo VTT", 150, 10, 140),
+  new Order(2, "Vélo BAP", 60, 40, 20)
+]);
+
 </script>
 
 <template>
@@ -15,17 +23,19 @@ const items = ref([{ message: 'Foo' }, { message: 'Bar' }])
       <thead>
       <tr>
         <th>ID</th>
-        <th>Nom</th>
+        <th>Nom du modèle</th>
+        <th>Quantité demandée</th>
         <th>Quantité actuel</th>
-        <th>Quantité à prévoir</th>
+        <th>Quantité restante</th>
       </tr>
       </thead>
       <tbody>
-      <tr v-for="item in items">
-        <td>{{ item.message }}</td>
-        <td>{{ item.message }}</td>
-        <td>{{ item.message }}</td>
-        <td>{{ item.message }}</td>
+      <tr v-for="item in data">
+        <td>{{ item.id}}</td>
+        <td>{{ item.nom }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.current_quantity }}</td>
+        <td>{{ item.needed_quantity }}</td>
       </tr>
       </tbody>
     </table>
